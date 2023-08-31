@@ -1,6 +1,7 @@
 ---
 import "../styling/global.css";
 const { title, override, ...rest } = Astro.props;
+const classes = `flex justify-center min-h-full bg-cover repeat-bg ${override}`;
 ---
 
 <script>
@@ -15,11 +16,7 @@ const { title, override, ...rest } = Astro.props;
   });
 </script>
 
-<html
-  lang="en"
-  class:list={["flex justify-center min-h-full bg-cover repeat-bg", override]}
-  {...rest}
->
+<html lang="en" class:list={[classes]} {...rest}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

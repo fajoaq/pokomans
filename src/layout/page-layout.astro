@@ -1,0 +1,33 @@
+---
+import "../styling/global.css";
+const { title, override, ...rest } = Astro.props;
+---
+
+<script>
+  // Find all details.
+  const details = document.querySelectorAll("details");
+
+  window.addEventListener("click", (e) => {
+    [...details].map((d) => {
+      if (e.target === d) d.open = !d.open;
+      else d.open = false;
+    });
+  });
+</script>
+
+<html
+  lang="en"
+  class:list={["flex justify-center min-h-full bg-cover repeat-bg", override]}
+  {...rest}
+>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title || "Pokoman"}</title>
+  </head>
+  <body class="flex flex-col p-4 pt-8 w-full max-w-4xl">
+    <slot />
+  </body>
+</html>

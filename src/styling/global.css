@@ -1,0 +1,31 @@
+@tailwind utilities;
+
+body h1 {
+  @apply text-3xl font-bold;
+}
+
+body h2 {
+  @apply text-xl;
+}
+
+details > summary {
+  @apply list-none;
+}
+
+details > summary::-webkit-details-marker {
+  @apply hidden;
+}
+
+.stat-md {
+  @apply !text-lg;
+}
+
+.repeat-bg {
+  background: repeating-linear-gradient(
+    45deg,
+    hsl(var(--b1)),
+    hsl(var(--b1)) 13px,
+    hsl(var(--b2)) 13px,
+    hsl(var(--b2)) 14px
+  );
+}

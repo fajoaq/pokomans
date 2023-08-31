@@ -1,0 +1,24 @@
+---
+const { pmove } = Astro.props;
+---
+
+<div class="card w-full max-w-xs lg:max-w-sm bg-base-100 shadow-lg mb-3">
+  <figure class="w-full p-4">
+    <svg
+      class="inline-block w-16 h-16 stroke-current fill-current"
+      focusable="false"
+      aria-hidden="true"
+      viewBox="0 0 24 24"><path d={pmove.imgSrc}></path></svg
+    >
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">
+      {pmove.title.charAt(0).toUpperCase() + pmove.title.slice(1)}
+      <div class="card-actions justify-end">
+        <div class="badge badge-secondary">Fishy</div>
+        <div class="badge badge-secondary">Smelly</div>
+      </div>
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+  </div>
+</div>

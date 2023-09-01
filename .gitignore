@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 #astro
 .astro
+
+#vercel
+.vercel
+
+#vscode
+.vscode

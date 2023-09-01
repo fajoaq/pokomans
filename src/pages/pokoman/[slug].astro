@@ -45,7 +45,7 @@ const { Content } = await render();
     <div class="drawer-side">
       <label for="my-drawer" class="drawer-overlay"></label>
 
-      <div class="menu h-full lg:max-w-[60%] p-4 bg-base-200 text-base-content">
+      <div class="menu h-full lg:max-w-[75%] p-4 bg-base-200 text-base-content">
         <PokomanSearch client:idle />
         <div transition:persist="pokoman-list">
         <PokomanList loadMax={2} increment={2} client:idle /></div>

@@ -59,7 +59,7 @@ export default function ({ loadMax, increment }: IProps) {
 
   return (
     <>
-      <List class="menu bg-base-200 flex w-60 lg:w-full  flex-wrap !flex-row rounded-box" />
+      <List class="menu bg-base-200 flex w-60 lg:w-full flex-wrap !flex-row rounded-box" />
 
       <div class="flex justify-center w-full">
         <button

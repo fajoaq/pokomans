@@ -1,5 +1,8 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+
 import "../styling/global.css";
+
 const { title, override, ...rest } = Astro.props;
 const classes = `flex justify-center min-h-full bg-cover repeat-bg ${override}`;
 ---
@@ -23,6 +26,7 @@ const classes = `flex justify-center min-h-full bg-cover repeat-bg ${override}`;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title || "Pokoman"}</title>
+    <ViewTransitions />
   </head>
   <body class="flex flex-col p-4 pt-8 w-full max-w-4xl">
     <slot />

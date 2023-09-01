@@ -7,9 +7,11 @@ import PokomanList from "../components/pokoman-list";
 <PageLayout title="Pokoman" override="repeat-bg">
   <h1 class="w-full">Pokoman</h1>
 
-  <div class="menu h-full p-4 bg-base-200 text-base-content">
+  <div class="menu h-full p-4 bg-base-200 text-base-content" >
     <PokomanSearch client:idle />
-    <PokomanList loadMax={2} increment={2} client:load />
+    <div transition:persist="pokoman-list">
+      <PokomanList loadMax={2} increment={2} client:load />
+    </div>
   </div>
 
   <p class="text-center">Copyright &copy; Francis Joaquin 2023</p>

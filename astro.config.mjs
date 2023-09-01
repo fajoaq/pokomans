@@ -4,13 +4,26 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 import vercel from "@astrojs/vercel/serverless";
-//import compress from "astro-compress";
+import compress from "astro-compress";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), solidJs()],
+  integrations: [
+    tailwind(),
+    solidJs(),
+    compress({
+      CSS: true,
+      HTML: {
+        removeAttributeQuotes: false,
+      },
+      Image: false,
+      JavaScript: true,
+      SVG: true,
+      Logger: 1,
+    }),
+  ],
   vite: {
     resolve: {
       alias: {
@@ -24,16 +37,3 @@ export default defineConfig({
   }),
   functionPerRoute: false,
 });
-
-/* 
-    compress({
-      CSS: true,
-      HTML: {
-        removeAttributeQuotes: false,
-      },
-      Image: false,
-      JavaScript: true,
-      SVG: true,
-      Logger: 1,
-    }),
-*/

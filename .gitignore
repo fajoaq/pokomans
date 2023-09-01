@@ -20,11 +20,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-#astro
-.astro
-
-#vercel
-.vercel
-
-#vscode
-.vscode
+#netlify
+.netlify

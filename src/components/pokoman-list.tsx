@@ -42,7 +42,7 @@ export default function ({ loadMax, increment }: IProps) {
                   <div class="avatar ">
                     <div class="w-16 rounded-full">
                       <img
-                        src={`/src/images/${p.data.title.toLowerCase()}.svg`}
+                        src={`/images/${p.data.title.toLowerCase()}.svg`}
                         alt={`The Pokoman named ${p.data.title}`}
                       />
                     </div>
